@@ -47,10 +47,15 @@ const App = () => {
 
     return (
       <div className="App">
-        <Navbar></Navbar>
+        <Router>
+          <Route path="/">
+        <Navbar />
+        
+        </Route>
         <h1>React - state</h1>
         <p>Count is: {state.clickCount}</p>
         <button onClick={clickHandler}> Click me </button>
+        
         <User
           theColor={state.backColor}
           firstName={state.userA.firstName}
@@ -62,6 +67,8 @@ const App = () => {
           image={state.userB.avatarUrl}
           bootcampName={state.userB.bootcamp}
            />
+           
+        </Router>
       </div>
     );
 }
